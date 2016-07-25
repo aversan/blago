@@ -1,0 +1,102 @@
+.icon
+	display inline-block
+	text-align center
+	vertical-align middle
+	font-size 0
+
+	&:before
+		content ''
+		display inline-block
+		vertical-align middle
+
+.icon-btn
+	position relative
+	width 30px
+	height 30px
+	line-height 30px
+	border-radius 100px
+	display inline-block
+	vertical-align middle
+	border none
+	background-color #8cb63c
+	font-size 0
+	text-align center
+	color #fff
+	cursor pointer
+	text-decoration none
+	margin 0
+
+	&:focus
+	&:hover
+		background-color #fff
+		outline none
+
+	&.active
+	&.active:hover
+	&.active:focus
+		cursor default
+
+	&:before
+		content ''
+		position absolute
+		left 50%
+		top 50%
+		display block
+		transform translate(-50%, -50%)
+
+.icon-btn--alt
+	background-color #ff5900
+
+	&:focus
+	&:hover
+		background-color #ff5900
+
+	&:before
+		content ''
+		position absolute
+		left 50%
+		top 50%
+		display block
+		transform translate(-50%, -50%)
+		opacity .9
+
+	&:focus:before
+	&:hover:before
+		opacity 1
+
+.icon-btn--email
+	&:before
+		sprite($icon_email)
+
+.icon-btn--pin
+	&:before
+		sprite($icon_white_plus)
+
+.icon-btn--up
+	width 66px
+	height 66px
+	position fixed
+	right 30px
+	bottom 30px
+	z-index 1111
+	background-color transparent
+
+	&:before
+		sprite($icon_up_circle)
+
+.icon--clock
+	&:before
+		sprite($icon_clock)
+
+.icon-btn--facebook
+.icon-btn--vkontakte
+.icon-btn--odnoklassniki
+	width 22px
+	height 22px
+	line-height 22px
+	border-radius none
+	background-color transparent
+
+	svg
+		width 22px
+		height 22px

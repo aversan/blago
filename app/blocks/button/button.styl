@@ -1,0 +1,79 @@
+.button
+	display inline-block
+	margin-bottom 0
+	text-align center
+	white-space nowrap
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	background-image none
+	border none
+	text-align center
+	padding 0 30px
+	min-width 60px
+	font-size 24px
+	font-weight 700
+	line-height 42px
+	height 42px
+	position relative
+	font-family lifehack_sansregular, 'Trebuchet MS', Arial, sans-serif
+	text-transform uppercase
+	letter-spacing .1ex
+	background-color transparent
+	color #fff
+
+	&:before
+	&:after
+		position absolute
+		content ''
+		display block
+		top 0
+		sprite($common_button)
+		width auto
+		z-index -1
+
+	&:before
+		left 0
+		right 29px
+		background-position 0 0
+
+	&:after
+		right 0
+		width 30px
+		background-position 100% 0
+
+	&:focus
+	&:hover
+		outline none
+		text-decoration none
+
+	&.disabled
+	&[disabled]
+	fieldset[disabled] &
+		cursor not-allowed
+		opacity .65
+
+	a&.disabled
+	fieldset[disabled] a&
+		pointer-events none
+
+
+a.button
+a.button:focus
+a.button:hover
+	color #fff
+	text-decoration none
+
+.button--width-2
+	min-width 140px
+
+.button__text
+	opacity .9
+
+.button:focus .button__text
+.button:hover .button__text
+	opacity 1

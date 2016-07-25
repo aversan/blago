@@ -1,0 +1,80 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Растительное масло | Благо';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClass = ''
+
+block header
+	include /blocks/page/page__header--oil
+
+block content
+	.container-fluid
+		section.teaser-container.teaser-container--tale
+			.row.teaser-row(data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'.teaser', repeat: true}")
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-01.png", alt="", width="383", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Благо&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-02.png", alt="", width="393", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Дары Кубани&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-03.png", alt="", width="363", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Подворье&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-01.png", alt="", width="383", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Благо&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-02.png", alt="", width="393", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Дары Кубани&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-03.png", alt="", width="363", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Подворье&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-01.png", alt="", width="383", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Благо&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-02.png", alt="", width="393", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Дары Кубани&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+				.col-4.teaser.js-double-hover-wrap.uk-invisible.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-03.png", alt="", width="363", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Подворье&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+	| <a class="icon-btn icon-btn--up" title="Наверх" role="button" data-uk-smooth-scroll href="#header"><span class="sr-only">Наверх</span></a>
+
+block footer
+	include /blocks/page/page__footer--default

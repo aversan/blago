@@ -1,0 +1,80 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Продукция | Благо';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClass = ''
+
+block header
+	include /blocks/page/page__header--products
+
+block content
+	.top-image.uk-cover.uk-cover-background(style="background-image:url(assets/images/top-image-products.jpg)")
+		img.uk-cover-object.invisible(src='assets/images/top-image-products.jpg', alt='Благо', width='1024', height='450')
+
+	.page__intro-panel.page__intro-panel--height-1.uk-flex.uk-flex-middle
+		.b-text.b-text--air.page__intro-text.page__intro-text--width-1(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+			p Продуктовый портфель Группы компаний «Благо» выгодно отличается разнообразием категорий, сортов и фасовок масложировой продукции: растительное масло, майонез и маргариновая продукция представлены в удобных и привычных для потребителей форматах  упаковки. Продукция Группы компаний «Благо» — это около 10 брендов растительного масла, 4 бренда маргарина, спред и майонез.
+
+	.uk-overlay.feature.uk-cover.uk-cover-background(style="background-image:url(assets/images/feature-01.jpg)")
+		.uk-overlay-panel.uk-flex.uk-flex-middle.feature__panel
+			.container-fluid.feature__panel-container
+				.b-text.b-text--air.feature__text(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+					h3.feature__title Крупный производитель
+					p Группы компаний «Благо» - крупный российский производитель масложировой продукции, функционирующий на рынке уже более 20 лет. За долгие годы успешной работы мы заслужили признание среди конкурентов, партнеров, клиентов и конечных потребителей. Нашей продукции доверяют не только требовательные потребители, но и государственные бюджетные учреждения.
+		img.uk-cover-object.invisible(src="assets/images/feature-01.jpg", alt="", width="1024" height="391")
+
+	.uk-overlay.feature.uk-cover.uk-cover-background(style="background-image:url(assets/images/feature-02.jpg)")
+		.uk-overlay-panel.uk-flex.uk-flex-middle.feature__panel
+			.container-fluid.feature__panel-container
+				.b-text.b-text--air.feature__text(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+					h3.feature__title Высокое качество
+					p Вся продукция Группы компаний «Благо» проходит несколько ступеней контроля: от испытаний сырья на входе до лабораторных исследований готовой продукции. Наша продукция соответствует нормам ГОСТ, ТУ, ТР ТС, ХАССП и других нормативных документов. Это позволяет предлагать нашим клиентам и потребителю продукцию стабильного высокого качества.
+		img.uk-cover-object.invisible(src="assets/images/feature-02.jpg", alt="", width="1024" height="391")
+
+	.uk-overlay.feature.uk-cover.uk-cover-background(style="background-image:url(assets/images/feature-03.jpg)")
+		.uk-overlay-panel.uk-flex.uk-flex-middle.feature__panel
+			.container-fluid.feature__panel-container
+				.b-text.b-text--air.feature__text(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+					h3.feature__title Натуральность
+					p Продукция Группы компаний «Благо» - это высококачественные продукты, в составе которых только натуральные ингредиенты. Благодаря строгому контролю входящего сырья, современному оборудованию и передовым технологиям производства и рафинации масла, «Благо» сохраняет в себе витамины и незаменимые жирные кислоты, необходимые организму человека для здоровой жизни.
+		img.uk-cover-object.invisible(src="assets/images/feature-03.jpg", alt="", width="1024" height="391")
+
+	.uk-overlay.feature.uk-cover.uk-cover-background(style="background-image:url(assets/images/feature-04.jpg)")
+		.uk-overlay-panel.uk-flex.uk-flex-middle.feature__panel
+			.container-fluid.feature__panel-container
+				.b-text.b-text--air.feature__text(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+					h3.feature__title Многообразие категорий, сортов и фасовок
+					p Продуктовый портфель Группы компаний «Благо» - это растительное масло самых популярных сортов, это привычные потребителям сорта майонеза, это многообразие маргариновой продукции. Почти все наши продукты имеют несколько вариантов фасовки и готовить с ними легко и удобно.
+		img.uk-cover-object.invisible(src="assets/images/feature-04.jpg", alt="", width="1024" height="391")
+
+	.container-fluid
+		section.teaser-container(data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}")
+			.row.teaser-row
+				.col-4.teaser.js-double-hover-wrap.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-01.png", alt="", width="383", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Благо&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+				.col-4.teaser.js-double-hover-wrap.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-02.png", alt="", width="393", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Дары Кубани&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+				.col-4.teaser.js-double-hover-wrap.teaser--hoverable
+					.teaser__img-wrapper
+						img.teaser__img(src="assets/images/teaser-03.png", alt="", width="363", height="356")
+					h3.teaser__title
+						a(href="product-card.html") &laquo;Подворье&raquo;
+					a.js-double-hover.uk-position-cover(href="product-card.html")
+
+	| <a class="icon-btn icon-btn--up" title="Наверх" role="button" data-uk-smooth-scroll href="#header"><span class="sr-only">Наверх</span></a>
+
+block footer
+	include /blocks/page/page__footer--default

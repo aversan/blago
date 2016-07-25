@@ -1,0 +1,134 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'О компании | Благо';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClass = ''
+
+block header
+	include /blocks/page/page__header--about
+
+block content
+	.uk-overlay.feature.feature--about.uk-cover.uk-cover-background(style="background-image:url(assets/images/feature-about.jpg)")
+		.uk-overlay-panel.feature__panel
+			.container-fluid.feature__panel-container
+				.b-text.b-text--air.feature__text
+					h4.feature__title Один из крупнейших производителей растительного масла, майонеза, маргариновой продукции, успешно функционирующий на рынке с 1993 года
+		img.uk-cover-object.invisible(src="assets/images/feature-about.jpg", alt="", width="1024" height="391")
+
+	main.promo.promo--main.promo--main--about
+		.uk-overlay.promo__box.promo__box--wide
+			.container-fluid.uk-overlay-panel.uk-flex.uk-flex-middle
+				div.width-wide
+					.row.promo__row
+						.col-6.promo__col-left(data-uk-scrollspy="{cls:'uk-animation-slide-left'}")
+							header.promo__header
+								h1.h1.h1--alt.promo__title О компании
+							.b-text.b-text--air.promo__text
+								p Группакомпаний «Благо» — вертикально интегрированный холдинг, в составкоторого входит три региональные производственные площадки: Армавирский масло­прессовый завод, Верхнехавский маслоэкстракционный завод и «ЕвдаковскийМЖК».
+								p Группа«Благо» объединяет компании численностью более 2300 человек, сотрудничает болеечем с сотней крупнейших дистрибуторов.
+
+			img.promo__box-image(src="assets/images/oil_maz.png", alt="", width="577", height="505")
+
+	.container-fluid
+		.teaser-container--icon
+			ul.row.teaser-row
+				li.col-3(data-uk-scrollspy="{cls:'uk-animation-scale-up'}")
+					.teaser.teaser--icon.teaser--hoverable
+						.icon.teaser__icon.teaser__icon--factory
+						.teaser__title Три собственных завода
+
+				li.col-3(data-uk-scrollspy="{cls:'uk-animation-scale-up', delay: 600}")
+					.teaser.teaser--icon.teaser--hoverable
+						.icon.teaser__icon.teaser__icon--employees
+						.teaser__title Более 2000 cотрудников
+
+				li.col-3(data-uk-scrollspy="{cls:'uk-animation-scale-up', delay: 900}")
+					.teaser.teaser--icon.teaser--hoverable
+						.icon.teaser__icon.teaser__icon--brands
+						.teaser__title Более 10<br>брендов
+
+				li.col-3(data-uk-scrollspy="{cls:'uk-animation-scale-up', delay: 1200}")
+					.teaser.teaser--icon.teaser--hoverable
+						.icon.teaser__icon.teaser__icon--world
+						.teaser__title  Экспорт в&nbsp;15 стран мира
+
+		.page__intro-panel
+			.b-text.page__intro-text.page__intro-text--width-3
+				p Современное высокотехнологичное оборудование, которым оснащены все производственные площадки Группы компаний «Благо», позволяет производить продукцию, отвечающую самым высоким требования мрынка. На предприятиях введена система менеджмента качества, что позволяет производить натуральный продукт стабильно высокого качества.
+
+		img.center-block.img-fluid(src="assets/images/about-01.jpg", alt="", width="945", height="531")
+
+		.page__intro-panel
+			.b-text.page__intro-text.page__intro-text--width-2
+				p Производственные возможности Группы компаний «Благо» позволяют производить высококачественную продукцию как B2C, так и для B2B сектора и покрывать нужды клиентов нетолько внутри страны, но и экспортировать ее более чем в 15 стран СНГ, Европы и Азии.
+
+		section.map
+			h2.h1.h1--alt.map__title Карта производственных площадок
+			.uk-overlay.map__overlay
+				img.map___image(src="assets/images/about-map.png", alt="", width="976", height="481")
+				.uk-overlay-panel.map__panel
+
+					.uk-button-dropdown(style="position:absolute;left: 47.4%;top:48.5%;", data-uk-dropdown="{pos:'left-bottom', mode: 'hover'}")
+						.map__pin
+							.map__pin-title с. Верхняя Хава
+						.uk-dropdown.uk-dropdown--map
+							.uk-dropdown__image(style="background-image:url(assets/images/dropdown-map-01.jpg)")
+							.uk-dropdown__block
+								.uk-dropdown__text
+									| ЕМЖК, с. Евдаково
+									| 156 000 тонн в год
+
+					.uk-button-dropdown(style="position:absolute;left: 45%;top:55.2%", data-uk-dropdown="{pos:'right-bottom', mode: 'hover'}")
+						.map__pin
+							.map__pin-title.map__pin-title--pos-left ПГТ Каменка
+						.uk-dropdown.uk-dropdown--map
+							.uk-dropdown__image(style="background-image:url(assets/images/dropdown-map-01.jpg)")
+							.uk-dropdown__block
+								.uk-dropdown__text
+									| ЕМЖК, с. Евдаково
+									| 156 000 тонн в год
+
+					.uk-button-dropdown(style="position:absolute;left: 55.4%;top:89.3%", data-uk-dropdown="{pos:'left-bottom', mode: 'hover'}")
+						.map__pin
+							.map__pin-title Армавир
+						.uk-dropdown.uk-dropdown--map
+							.uk-dropdown__image(style="background-image:url(assets/images/dropdown-map-01.jpg)")
+							.uk-dropdown__block
+								.uk-dropdown__text
+									| ЕМЖК, с. Евдаково
+									| ЕМЖК, с. Евдаково
+									| ЕМЖК, с. Евдаково
+									| 156 000 тонн в год
+
+		.page__intro-panel
+			.b-text.page__intro-text.page__intro-text--width-2
+				p Продукция Группы компаний «Благо» представлена не только во всех крупнейших федеральных торговых сетях, но и в других форматах торговых точек, включая магазины у дома. Мы ежегодно расширяем географию продаж, что бы потребитель мог купить любимый продукт в любой доступной ему торговой точке.
+
+		.banner-container
+			.row
+				.col-6
+					figure.uk-overlay.uk-overlay-hover.banner
+						img.banner__img.uk-overlay-scale(src="assets/images/banner-01.jpg", alt="", width="560" height="272")
+						div.uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-text-center.uk-ignore
+							.banner__content
+								img.banner__logo(src="assets/images/banner-evdakovo-logo.png", alt="", width="311", height="88")
+								.banner__go Перейти на сайт
+						a.uk-position-cover(href="", target="_blank")
+
+				.col-6
+					figure.uk-overlay.uk-overlay-hover.banner
+						img.banner__img.uk-overlay-scale(src="assets/images/banner-02.jpg", alt="", width="560" height="272")
+						div.uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-text-center.uk-ignore
+							.banner__content
+								img.banner__logo(src="assets/images/banner-blago-logo.png", alt="", width="203", height="79")
+								.banner__go Перейти на сайт
+						a.uk-position-cover(href="", target="_blank")
+
+	| <a class="icon-btn icon-btn--up" title="Наверх" role="button" data-uk-smooth-scroll href="#header"><span class="sr-only">Наверх</span></a>
+
+block footer
+	include /blocks/page/page__footer--default

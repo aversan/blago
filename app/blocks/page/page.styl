@@ -1,0 +1,158 @@
+.page
+	height 100%
+	margin-left auto
+	margin-right auto
+	position relative
+
+	body&
+		background-image url(../images/page-bg.jpg)
+		background-position 50% 0
+		background-repeat repeat
+
+	.logo-box
+		position absolute
+		left 33px
+		top 0
+
+.page__header
+	&
+	.container-fluid
+		height 150px
+
+	&:before
+		content ''
+		display block
+		position absolute
+		top 0
+		left -15px
+		right -15px
+		height 41px
+		background url(../images/header-line.svg) 50% 100% no-repeat
+		background-size cover
+		z-index -1
+
+	.container-fluid
+		position relative
+
+.page__header-navigation
+	position absolute
+	top 50%
+	margin-top -14px
+	left 300px
+	right 200px
+
+.page__wrapper
+	overflow hidden
+	overflow-y auto
+	min-height 100%
+	height auto
+	position relative
+
+.page__footer-wrapper
+	overflow hidden
+	padding-top 41px
+	margin-top -41px
+
+.page__footer
+	font-family 'Trebuchet MS', Arial, sans-serif
+	font-size .875rem
+	font-weight 400
+	line-height 1.42857
+	background #253915 url(../images/footer-bg.jpg) 50% 0 repeat-x
+	background-size cover
+	color #fff
+	position relative
+
+	&:before
+		content ''
+		display block
+		position absolute
+		bottom 100%
+		left -15px
+		right -15px
+		height 41px
+		background url(../images/footer-line.svg) 50% 0 no-repeat
+		background-size 100%
+
+	.container-fluid
+		position relative
+
+.page__footer-main
+	height 160px
+	position relative
+
+.page__footer-copyright
+.page__footer-site-link
+.page__footer-email
+.page__footer-logo
+	position absolute
+	top 50%
+	transform translate(0, -50%)
+	margin 0
+
+.page__footer-copyright
+	width 16rem
+	left 5%
+	margin-top -3px
+
+.page__footer-site-link
+	left 41%
+	display inline-block
+	width 8.125rem
+	margin-top -3px
+
+	color #8cb63c
+	text-decoration underline
+
+	&:focus
+	&:hover
+		color #8cb63c
+
+.page__footer-logo
+	right 2.7%
+
+.page__footer-email
+	right 23%
+
+
+.page__footer-banner
+	padding-top 60px
+	text-align center
+
+.page__footer .swiper-container--logo
+	height 270px
+
+.hr.page__footer-hr
+	margin-top 0
+	margin-bottom 0
+
+.page__intro-panel
+	padding 60px 0
+	color $text-base
+
+	.teaser-container--icon + &
+		padding-top 0
+
+.page__intro-text
+	font-family 'latobold', 'Trebuchet MS', Arial, sans-serif
+	text-align center
+
+	margin-left auto
+	margin-right auto
+
+	& > ul:last-child
+	& > p:last-child
+		margin-bottom 0 !important
+
+.page__intro-text--width-1
+	max-width 55%
+
+.page__intro-text--width-2
+	max-width 71%
+
+.page__intro-text--width-3
+	max-width 83%
+
+
+.page__intro-panel--height-1
+	height: 24.4rem

@@ -1,0 +1,195 @@
+.teaser
+	display inline-block
+	vertical-align top
+	position relative
+	margin-left auto
+	margin-right auto
+
+.teaser__img-wrapper
+	height 356px
+	position relative
+	margin-left auto
+	margin-right auto
+
+	.teaser__img
+		position absolute
+		left 50%
+		bottom 0
+		transform translate(-50%, 0)
+
+.teaser__title
+	font-size 1rem
+	text-transform uppercase
+	letter-spacing .1ex
+	text-align center
+	margin-bottom 0
+	max-width 17.1875rem
+	margin-left auto
+	margin-right auto
+
+	a
+		text-decoration none
+
+.teaser--hoverable
+	.teaser__img-wrapper
+		transition-duration 0.3s
+		transition-timing-function ease-out
+		transition-property opacity
+		opacity .9
+
+	&:hover
+		.teaser__img-wrapper
+			opacity 1
+
+.teaser--thumb
+	cursor pointer
+
+	.teaser__img-wrapper
+		height 155px
+		width 138px
+
+	.teaser__img
+		transition-duration 0.3s
+		transition-timing-function ease-out
+		transition-property opacity
+		opacity .5
+
+	&:hover
+	&.teaser--active
+	&.uk-active
+		.teaser__img
+			opacity 1
+
+	.teaser__title
+		font-family 'lifehack_sansbold', 'Trebuchet MS', Arial, sans-serif
+		font-size 1.25rem
+		line-height 1
+		max-width 10rem
+		color $link-color
+
+	&.teaser--active
+	&.uk-active
+		cursor default
+
+		.teaser__title
+			color $text-base
+
+.teaser--alt
+	display block
+	background-color #fffdef
+	box-shadow 1px 1px 6px rgba(50, 41, 32, 0.27)
+	padding 12px 12px 17px
+	width 263px
+	height 360px
+
+	.teaser__img-wrapper
+		width 239px
+		height 297px
+		background-size cover
+		background-repeat no-repeat
+		background-position center
+
+	.teaser__title
+		font-size .875rem
+		color #311513
+		margin-top 1.125rem
+		font-family 'latobold', 'Trebuchet MS', Arial, sans-serif
+
+		a
+			color #311513
+
+			&:focus
+			&:hover
+			&.hover
+				color $link-hover-color
+
+.teaser--icon
+	display block
+	width 11rem
+	margin-left auto
+	margin-right auto
+
+	.teaser__title
+		text-align center
+		font-family 'latobold', 'Trebuchet MS', Arial, sans-serif
+		font-size .875rem
+		line-height 1.57
+		color #311513
+		margin-top 1.4285rem
+		max-width auto
+
+		a
+			color #311513
+
+			&:focus
+			&:hover
+			&.hover
+				color $link-hover-color
+
+
+	.teaser__icon
+		display block
+		width 106px
+		height 106px
+		line-height 106px
+		margin-left auto
+		margin-right auto
+
+	.teaser__icon--factory:before
+		sprite($icon_teaser_factory)
+
+	.teaser__icon--employees:before
+		sprite($icon_teaser_employees)
+
+	.teaser__icon--brands:before
+		sprite($icon_teaser_brands)
+
+	.teaser__icon--world:before
+		sprite($icon_teaser_world)
+
+.teaser-row
+	font-size 0
+	white-space nowrap
+
+	& > .col
+	& > .col-3
+	& > .col-4
+		display inline-block
+		vertical-align top
+		font-size 1rem
+		float none !important
+		white-space normal
+
+.teaser-row--thumb2
+	margin-left 0
+	margin-right 0
+
+.teaser-container
+	padding-top 70px
+	padding-bottom 70px
+
+.teaser-container__title
+	text-align center
+	margin-bottom 70px
+
+.teaser-container--tale
+	padding-top 35px
+	padding-bottom 70px
+
+	.teaser-row
+		white-space normal
+		margin-bottom -70px
+
+	.teaser
+		margin-bottom 70px
+
+.teaser-container--alt
+	padding-top 70px
+	padding-bottom 125px
+
+.teaser-container--icon
+	padding-top 80px
+	padding-bottom 80px
+
+	.teaser-row
+		margin-bottom 0

@@ -1,0 +1,22 @@
+include /../node_modules/bemto.jade/bemto
+include /../node_modules/jade-injected/jade-injected
+include ../page/page
+include ../scripts/scripts
+include ../icon/icon
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page(class=pageClass || '')
+		.page__wrapper.decor--page
+			i.decor__page-tl
+			i.decor__page-tr
+			i.decor__page-t
+			i.decor__page-l
+			i.decor__page-r
+			block header
+				include ../page/page__header--default
+			block content
+		block footer
+			include ../page/page__footer--default
+		+scripts(['app.min.js'])
