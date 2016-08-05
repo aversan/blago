@@ -14,7 +14,7 @@ block header
 block content
 	.container-fluid
 		.uk-switcher#pcard_switcher
-			article.product-card.uk-active
+			article.product-card.product-card--one.uk-active
 				.product-card__content
 					h2.h1.h1--alt.product-card__title Масло подсолнечно-оливковое
 					.b-text.b-text--air.product-card__text
@@ -30,47 +30,6 @@ block content
 						.swiper-wrapper
 							.swiper-slide
 								img.img-fluid(src="assets/images/pcard-01.png", alt="", width="451", height="686")
-
-							.swiper-slide
-								img.img-fluid.swiper-lazy(src="assets/images/blank.gif", data-src="assets/images/pcard-02.png", alt="", width="451", height="686")
-								.swiper-lazy-preloader.swiper-lazy-preloader-white
-
-							.swiper-slide
-								img.img-fluid.swiper-lazy(src="assets/images/blank.gif", data-src="assets/images/pcard-03.png", alt="", width="451", height="686")
-								.swiper-lazy-preloader.swiper-lazy-preloader-white
-
-							.swiper-slide
-								img.img-fluid.swiper-lazy(src="assets/images/blank.gif", data-src="assets/images/pcard-04.png", alt="", width="451", height="686")
-								.swiper-lazy-preloader.swiper-lazy-preloader-white
-
-					.swiper-container-wrapper-thumbs-icon
-						.swiper-container.swiper-container--thumbs-icon
-							.swiper-wrapper
-								.swiper-slide.swiper-slide--icon-bottle-05l 0,5 л.
-								.swiper-slide.swiper-slide--icon-bottle-09l 0,9 л.
-								.swiper-slide.swiper-slide--icon-bottle-1l 1 л.
-								.swiper-slide.swiper-slide--icon-bottle-2l 2 л.
-								.swiper-slide.swiper-slide--icon-bottle-48l 4,8 л.
-								.swiper-slide.swiper-slide--icon-bottle-5l 5 л.
-
-			article.product-card 2
-			article.product-card 3
-			article.product-card 4
-
-		.product-card-teaser-thumb-container
-			.teaser-row.teaser-row--thumbs(data-uk-switcher="{connect:'#pcard_switcher', animation: 'uk-animation-fade'}")
-				.teaser.teaser--thumb.col.uk-active
-					.teaser__img-wrapper
-						img.teaser__img(src="assets/images/teaser-pcard-01.png", alt="", width="212", height="154")
-					.teaser__title Масло подсолнечно-оливковое
-				.teaser.teaser--thumb.col
-					.teaser__img-wrapper
-						img.teaser__img(src="assets/images/teaser-pcard-02.png", alt="", width="212", height="155")
-					.teaser__title Кукурузное масло
-				.teaser.teaser--thumb.col
-					.teaser__img-wrapper
-						img.teaser__img(src="assets/images/teaser-pcard-03.png", alt="", width="176", height="146")
-					.teaser__title Подсолнечное масло
 
 		.promo.promo--recept.promo--recept--alt.decor.decor--promo.decor--promo--recept(data-uk-observe)
 			.promo__note.decor__note

@@ -45,12 +45,19 @@ $(() => {
         calculateHeight:true,
         spaceBetween: 25,
         centeredSlides: true,
-        loop: true,
-        loopedSlides: 7
+        loop: true//,
+        //loopedSlides: 7
     });
 
     swiperRecept.params.control = swiperThumbs;
     swiperThumbs.params.control = swiperRecept;
+
+    swiperRecept.on('onTransitionStart', function(swiper){
+        var $activeSlide = $(swiper.slides).eq(swiper.activeIndex);
+
+        $(swiper.slides).not(':eq(' + swiper.activeIndex + ')')
+            .find('.promo__collapse.in').collapse('hide');
+    });
 
     var $pcards = $('.product-card');
     for (var i = $pcards.length - 1; i >= 0; i--) {
@@ -225,5 +232,45 @@ $(() => {
         } else {
             $(target).collapse('show');
         }
+    });
+
+    var $btnUp = $('.icon-btn--up');
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 600) {
+            $btnUp.fadeIn(300);
+        } else {
+            $btnUp.fadeOut(300);
+        }
+    });
+
+    $('.js-pin').on('click', function(){
+        var $pin = $(this);
+        var options = UIkit.Utils.options($pin.attr("data-uk-modal"));
+        var $modal = $(options.target);
+        var $more = $modal.find('.js-modal-recept__more');
+        var modal = UIkit.modal(options.target, options);
+        var isMore = false;
+
+        $modal.on('hide.uk.modal', function(){
+            var $scrollTo = $($more.data('scroll-to'));
+            var slideIndex = $more.data('slide-index');
+            var swiper = $scrollTo.find('.swiper-container--recept')[0].swiper;
+            var $collapse = $($(swiper.slides).eq(slideIndex).find('.promo__toggle').data('target'));
+
+            if (!!isMore) {
+                UIkit.Utils.scrollToElement($scrollTo);
+            }
+
+            swiper.slideTo(slideIndex);
+            $collapse.collapse('show');
+
+            isMore = false;
+        });
+
+        $more.on('click', function(){
+            isMore = true;
+
+            modal.hide();
+        });
     });
 });
