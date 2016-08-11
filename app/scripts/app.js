@@ -37,7 +37,8 @@ $(() => {
         slidesPerView: 7,
         touchRatio: 0.2,
         slideToClickedSlide: true,
-        loop: true
+        noSwiping: true,
+        loop: ($('.swiper-container--thumbs .swiper-slide').length >= 7) ? true : false
     });
 
     var swiperRecept = swiper('.swiper-container--recept', {
@@ -45,7 +46,8 @@ $(() => {
         calculateHeight:true,
         spaceBetween: 25,
         centeredSlides: true,
-        loop: true//,
+        noSwiping: true,
+        loop: ($('.swiper-container--recept .swiper-slide').length >= 7) ? true : false//,
         //loopedSlides: 7
     });
 
