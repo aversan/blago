@@ -54,12 +54,14 @@ $(() => {
     swiperRecept.params.control = swiperThumbs;
     swiperThumbs.params.control = swiperRecept;
 
-    swiperRecept.on('onTransitionStart', function(swiper){
-        var $activeSlide = $(swiper.slides).eq(swiper.activeIndex);
+    try {
+        swiperRecept.on('onTransitionStart', function(swiper){
+            var $activeSlide = $(swiper.slides).eq(swiper.activeIndex);
 
-        $(swiper.slides).not(':eq(' + swiper.activeIndex + ')')
-            .find('.promo__collapse.in').collapse('hide');
-    });
+            $(swiper.slides).not(':eq(' + swiper.activeIndex + ')')
+                .find('.promo__collapse.in').collapse('hide');
+        });
+    } catch(e) { }
 
     var $pcards = $('.product-card');
     for (var i = $pcards.length - 1; i >= 0; i--) {
